@@ -10,7 +10,7 @@ int main(void) {
 	cin >> n;
 	for (int i = 0; i < n; i++) {
 		cin >> A[i];
-		max_A = max(max_A, A[i]); //A�� �ִ�
+		max_A = max(max_A, A[i]); //A 배열의 최댓값
 	}
 
 	for (int i = 0; i < n - 1; i++) {
@@ -21,7 +21,6 @@ int main(void) {
 				B[i] = j;
 			}
 		}
-		cout << endl;
 	}
 
 	for (int i = 0; i < n - 1; i++) cout << B[i] << " ";
