@@ -10,9 +10,10 @@ int main(void) {
 	cin >> n;
 	for (int i = 0; i < n; i++) {
 		cin >> A[i];
-		max_A = max(max_A, A[i]); //A 배열의 최댓값
+		//max_A = max(max_A, A[i]); //A 배열의 최댓값
 	}
-
+	max_A = A[n - 1]; //문제에 마지막 원소가 최대래
+	
 	for (int i = 0; i < n - 1; i++) {
 		int temp_A = A[i]; int temp_B = max_A;
 		for (int j = i + 1; j < n; j++) {
