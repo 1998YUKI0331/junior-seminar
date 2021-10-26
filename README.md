@@ -21,3 +21,14 @@ cout << upper_bound(arr, arr + 11, 5) - arr << endl; //9 출력
 ```
 * lower bound란 정렬을 유지하며 삽입 가능한 가장 작은 인덱스
 * upper bound는 반대로 삽입 가능 위치들 중 가장 큰 인덱스
+
+
+### find(T.begin(), T.end(), val)
+* vector, 배열 등에서 특정 데이터가 존재하는지 확인할 때 사용
+```
+vector<int> vec = { 1,2,3 };	
+auto it = find(v.begin(), v.end(), 2);
+if (it != v.end()) { cout << it - v.begin(); } //1 출력 (인덱스)
+```
+* algorithm 라이브러리에 있음
+* find_if를 사용하면 특정 조건에 일치하는 데이터를 탐색
