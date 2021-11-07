@@ -5,24 +5,23 @@
 using namespace std;
 
 int main(void) {
-	int cost; vector<int> arr(500000);
-	int result = 0; //ø¨º”µ» √÷¥Î ±Ê¿Ã
+	int cost; vector<int> arr;
+	int result = 0; //Ïó∞ÏÜçÎêú ÏµúÎåÄ Í∏∏Ïù¥
 	cin >> cost;
-	
-	int idx = 0; //arr πËø≠¿« ±Ê¿Ã
+
 	while (1) {
 		int temp = 0; cin >> temp;
 		if (temp == -1) break;
-		arr[idx++] = temp;
+		arr.push_back(temp);
 	}
 
 	int start = 0; int sum = 0;
-	for (int end = 0; end < idx; end++) {
-		result = max(result, end - start);
+	for (int end = 0; end < arr.size(); end++) {
 		sum += arr[end];
 		while (sum > cost) {
 			sum -= arr[start++];
 		}
+		result = max(result, end - start + 1);
 	}
 
 	cout << result;
